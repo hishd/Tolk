@@ -44,7 +44,7 @@
         android:layout_marginTop="@dimen/_8sdp"
         android:layout_marginEnd="@dimen/_20sdp"
         android:adjustViewBounds="true"
-        android:scaleType="center"
+        android:scaleType="fitCenter"
         android:src="@drawable/dummy_image"
         android:visibility="visible" />
 
