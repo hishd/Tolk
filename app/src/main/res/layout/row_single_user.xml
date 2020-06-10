@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/layoutRoot"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/round_layout_bg_white"
+    android:paddingStart="@dimen/_5sdp"
+    android:paddingTop="@dimen/_8sdp"
+    android:paddingEnd="@dimen/_5sdp"
+    android:paddingBottom="@dimen/_8sdp">
+
+    <ImageView
+        android:id="@+id/imgPic"
+        android:layout_width="@dimen/_80sdp"
+        android:layout_height="@dimen/_80sdp"
+        android:layout_alignParentStart="true"
+        android:scaleType="centerCrop"
+        android:src="@drawable/profile_blank" />
+
+    <TextView
+        android:id="@+id/txtName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/imgPic"
+        android:layout_alignStart="@id/imgPic"
+        android:layout_alignEnd="@id/imgPic"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:text="User Name"
+        android:textAlignment="center" />
+
+</RelativeLayout>

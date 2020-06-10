@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activity_single_chat">
+
+    <RelativeLayout
+        android:id="@+id/layout_header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/blue"
+        android:paddingStart="@dimen/_10sdp"
+        android:paddingTop="@dimen/_30sdp"
+        android:paddingEnd="@dimen/_10sdp"
+        android:paddingBottom="@dimen/_10sdp">
+
+        <ImageView
+            android:id="@+id/imgBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@id/txtName"
+            android:layout_alignBottom="@id/txtStatus"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:src="@drawable/ic_arrow_back" />
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/imgProfilePic"
+            android:layout_width="@dimen/_35sdp"
+            android:layout_height="@dimen/_35sdp"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:layout_toEndOf="@id/imgBack"
+            android:scaleType="centerCrop"
+            android:src="@drawable/profile_blank"
+            app:civ_border_color="#FF000000"
+            app:civ_border_width="0dp" />
+
+        <TextView
+            android:id="@+id/txtName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/imgProfilePic"
+            android:text="Person Name"
+            android:textColor="@color/white"
+            android:textSize="18sp" />
+
+        <TextView
+            android:layout_marginTop="@dimen/_2sdp"
+            android:textSize="12sp"
+            android:id="@+id/txtStatus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txtName"
+            android:layout_toEndOf="@id/imgProfilePic"
+            android:text="Online"
+            android:textColor="@color/white" />
+
+    </RelativeLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/listMessages"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/layout_bottom"
+        android:layout_below="@id/layout_header"
+        android:paddingTop="@dimen/_5sdp" />
+
+    <RelativeLayout
+        android:id="@+id/layout_empty_chat"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/layout_bottom"
+        android:layout_below="@id/layout_header">
+
+        <ImageView
+            android:id="@+id/img_message"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/message" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/img_message"
+            android:layout_centerHorizontal="true"
+            android:text="No Messages" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/layout_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/blue"
+        android:paddingStart="@dimen/_5sdp"
+        android:paddingTop="@dimen/_8sdp"
+        android:paddingEnd="@dimen/_5sdp"
+        android:paddingBottom="@dimen/_8sdp">
+
+        <ImageView
+            android:id="@+id/imgAttach"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@id/txtMessage"
+            android:layout_alignBottom="@id/txtMessage"
+            android:layout_alignParentStart="true"
+            android:src="@drawable/ic_attach_file_white" />
+
+        <EditText
+            android:textColor="@color/white"
+            android:id="@+id/txtMessage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_5sdp"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:layout_toStartOf="@id/imgSend"
+            android:layout_toEndOf="@id/imgAttach"
+            android:hint="Write a Message"
+            android:textColorHint="@color/white" />
+
+        <ImageView
+            android:id="@+id/imgSend"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@id/txtMessage"
+            android:layout_alignBottom="@id/txtMessage"
+            android:layout_alignParentEnd="true"
+            android:src="@drawable/ic_send_white" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

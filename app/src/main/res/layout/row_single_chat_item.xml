@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/chat_linear_layout"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="@dimen/_5sdp"
+    android:layout_marginTop="@dimen/_5sdp"
+    android:layout_marginEnd="@dimen/_5sdp"
+    android:layout_marginBottom="@dimen/_5sdp"
+    android:paddingTop="@dimen/_5sdp"
+    android:paddingBottom="@dimen/_3sdp"
+    android:background="@drawable/bg_outgoing_message"
+    android:maxWidth="@dimen/_200sdp"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/txtName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:layout_marginEnd="@dimen/_20sdp"
+        android:text="Name"
+        android:textColor="#000000"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/txtBody"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_3sdp"
+        android:layout_marginEnd="@dimen/_20sdp"
+        android:text="Message Body"
+        android:textColor="@color/dark_gray" />
+
+    <ImageView
+        android:id="@+id/imgUploaded"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:maxHeight="@dimen/_150sdp"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_8sdp"
+        android:layout_marginEnd="@dimen/_20sdp"
+        android:adjustViewBounds="true"
+        android:scaleType="center"
+        android:src="@drawable/dummy_image"
+        android:visibility="visible" />
+
+    <com.github.curioustechizen.ago.RelativeTimeTextView
+        android:layout_marginTop="@dimen/_5sdp"
+        android:id="@+id/txtSentTime"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:layout_marginEnd="@dimen/_20sdp"
+        android:textAlignment="textEnd" />
+
+</LinearLayout>
